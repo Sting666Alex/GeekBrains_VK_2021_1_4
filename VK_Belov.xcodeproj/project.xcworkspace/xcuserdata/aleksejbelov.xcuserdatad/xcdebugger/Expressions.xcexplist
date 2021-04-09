@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "FirstLetterOfTheName.setup():FirstLetterOfTheName.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "buttons">
+            </PersistentString>
+            <PersistentString
+               value = "String(stringNameArr.name)">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "FotoCollectionViewController.collectionView(_:cellForItemAt:):FotoCollectionViewController.swift">
+      </ContextState>
+      <ContextState
+         contextName = "AvatarViewController.viewDidLoad():AvatarViewController.swift">
+      </ContextState>
+      <ContextState
+         contextName = "FotoCollectionViewCell.configure():FotoCollectionViewCell.swift">
+      </ContextState>
+      <ContextState
+         contextName = "__pthread_kill:(null)">
+      </ContextState>
+      <ContextState
+         contextName = "implicit closure #2 in implicit closure #1 in FirstLetterOfTheName.setup():FirstLetterOfTheName.swift">
+      </ContextState>
+      <ContextState
+         contextName = "FotoCollectionViewCell.awakeFromNib():FotoCollectionViewCell.swift">
+      </ContextState>
+      <ContextState
+         contextName = "FrendsTableViewController.tableView(_:numberOfRowsInSection:):FrendsTableViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "myFrendsSection.count">
+            </PersistentString>
+            <PersistentString
+               value = "firstArrUser[0]">
+            </PersistentString>
+            <PersistentString
+               value = "value.filter(firstArrUser[0])">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "FotoCollectionViewCell.configure(width:):FotoCollectionViewCell.swift">
+      </ContextState>
+      <ContextState
+         contextName = "FrendsTableViewController.tableView(_:cellForRowAt:):FrendsTableViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "myFrendsSection">
+            </PersistentString>
+            <PersistentString
+               value = "indexPath.row">
+            </PersistentString>
+            <PersistentString
+               value = "indexPath.section">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "FirstLetterOfTheName.backward(_:_:):FirstLetterOfTheName.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "s1.name.first!">
+            </PersistentString>
+            <PersistentString
+               value = "s2.name.first!">
+            </PersistentString>
+            <PersistentString
+               value = "s1.name.first! &gt;= s2.name.first!">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "NewsCollectionView.getNews(for:):NewsCollectionView.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "sections">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>
