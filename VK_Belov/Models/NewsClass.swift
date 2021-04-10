@@ -41,7 +41,7 @@ extension NewsClass {
             NewsClass(textLable: "John",
                       titleLable: "",
                       who: "Alex",
-                      date: stringToDate("2021-03-01"),
+                      date: stringToDate("2021-03-01T00:00:00+0000"),
                       likeNumber: 0,
                       numberOfViewsText: randomInt(),
                       urlFoto: ""),
@@ -49,7 +49,7 @@ extension NewsClass {
             NewsClass(textLable: "John",
                       titleLable: "",
                       who: "Bob",
-                      date: stringToDate("2021-04-01"),
+                      date: stringToDate("2021-04-01T00:00:00+0000"),
                       likeNumber: 0,
                       numberOfViewsText: randomInt(),
                       urlFoto: "")
@@ -59,7 +59,7 @@ extension NewsClass {
     static func stringToDate(_ dateString: String) -> Date{
         // Взято из одного форума
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss ZZZ"
+        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"//"yyyy-MM-dd HH:mm:ss ZZZ"
         if let date = dateFormatter.date(from: dateString)
         {
             return date

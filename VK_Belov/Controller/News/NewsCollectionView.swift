@@ -18,7 +18,7 @@ class NewsCollectionView: UICollectionViewController,
         collectionView.register(UINib(nibName: "NewsCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: NewsCollectionViewCell.reuseId)
         
         loadNews()
-        
+        setupDataSource()
     }
     // MARK: - Data source
     var myNews: [NewsClass] = []
@@ -61,7 +61,7 @@ class NewsCollectionView: UICollectionViewController,
     
     private func getNews( for indexPath: IndexPath) -> NewsClass {
         let sectionLetter = sections[indexPath.section]
-        return myNewsSection[sectionLetter]![indexPath.row]
+        return myNewsSection[sectionLetter]![0] //[indexPath.row]
     }
     
     // MARK: - Collection view data source
