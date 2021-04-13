@@ -19,7 +19,7 @@ final class UserSession {
 }
 
 
-class ViewController: BaseViewController {
+class FirsScreen: BaseViewController {
 
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var loginTestField: UITextField!
