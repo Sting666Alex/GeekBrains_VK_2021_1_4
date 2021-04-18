@@ -47,45 +47,7 @@ extension User {
     static var firstLetters:[String] = []
     
     static var arrUser:[User]{
-        return [
-            User(name: "John", surname: "", age: 1, sex: .male, urlFoto: self.randomImage()),
-            User(name: "Bob", surname: "", age: 1, sex: .male, urlFoto: self.randomImage()),
-            User(name: "Monica", surname: "", age: 1, sex: .female, urlFoto: self.randomImage()),
-            User(name: "Joana", surname: "", age: 1, sex: .female, urlFoto: self.randomImage()),
-            
-            User(name: "Lola", surname: "", age: 1, sex: .female, urlFoto: self.randomImage()),
-            User(name: "Greg", surname: "", age: 1, sex: .female, urlFoto: self.randomImage()),
-            
-            User(name: "Alex", surname: "", age: 1, sex: .female, urlFoto: self.randomImage()),
-            User(name: "Andrew", surname: "", age: 1, sex: .female, urlFoto: self.randomImage()),
-            User(name: "Anton", surname: "", age: 1, sex: .female, urlFoto: self.randomImage()),
-            
-            User(name: "Dilan", surname: "", age: 1, sex: .female, urlFoto: self.randomImage()),
-            User(name: "Colen", surname: "", age: 1, sex: .female, urlFoto: self.randomImage()),
-            User(name: "Inga", surname: "", age: 1, sex: .female, urlFoto: self.randomImage()),
-            User(name: "Flora", surname: "", age: 1, sex: .female, urlFoto: self.randomImage()),
-            
-            User(name: "Elionor", surname: "", age: 1, sex: .female, urlFoto: self.randomImage()),
-            User(name: "Herb", surname: "", age: 1, sex: .female, urlFoto: self.randomImage()),
-            User(name: "Klint", surname: "", age: 1, sex: .female, urlFoto: self.randomImage()),
-            User(name: "Nora", surname: "", age: 1, sex: .female, urlFoto: self.randomImage()),
-            User(name: "Olga", surname: "", age: 1, sex: .female, urlFoto: self.randomImage()),
-            User(name: "Petr", surname: "", age: 1, sex: .female, urlFoto: self.randomImage()),
-
-            User(name: "Quwin", surname: "", age: 1, sex: .female, urlFoto: self.randomImage()),
-            User(name: "Robert", surname: "", age: 1, sex: .female, urlFoto: self.randomImage()),
-            User(name: "Serg", surname: "", age: 1, sex: .female, urlFoto: self.randomImage()),
-            User(name: "Tery", surname: "", age: 1, sex: .female, urlFoto: self.randomImage()),
-            User(name: "Uliam", surname: "", age: 1, sex: .female, urlFoto: self.randomImage()),
-
-            User(name: "Violet", surname: "", age: 1, sex: .female, urlFoto: self.randomImage()),
-            User(name: "Wolf", surname: "", age: 1, sex: .female, urlFoto: self.randomImage()),
-            User(name: "Xander", surname: "", age: 1, sex: .female, urlFoto: self.randomImage()),
-            User(name: "Yellow", surname: "", age: 1, sex: .female, urlFoto: self.randomImage()),
-            User(name: "Zelda", surname: "", age: 1, sex: .female, urlFoto: self.randomImage()),
-
-            User(name: "Liza", surname: "", age: 1, sex: .female, urlFoto: self.randomImage())
-        ]
+        return getFrendsUser()
     }
     
     static func backward(_ s1: User, _ s2: User) -> Bool {
@@ -95,4 +57,47 @@ extension User {
     static func randomImage() -> String{
         return String(Int.random(in: 1...6))
     }
+    
+    static func getFrendsUser() -> [User]{
+        return[
+        User(name: "John", surname: "", age: 1, sex: .male, urlFoto: self.randomImage()),
+        User(name: "Bob", surname: "", age: 1, sex: .male, urlFoto: self.randomImage()),
+        User(name: "Monica", surname: "", age: 1, sex: .female, urlFoto: self.randomImage()),
+        User(name: "Joana", surname: "", age: 1, sex: .female, urlFoto: self.randomImage()),
+        
+        User(name: "Lola", surname: "", age: 1, sex: .female, urlFoto: self.randomImage()),
+        User(name: "Greg", surname: "", age: 1, sex: .female, urlFoto: self.randomImage()),
+        
+        User(name: "Alex", surname: "", age: 1, sex: .female, urlFoto: self.randomImage()),
+        User(name: "Andrew", surname: "", age: 1, sex: .female, urlFoto: self.randomImage()),
+        User(name: "Anton", surname: "", age: 1, sex: .female, urlFoto: self.randomImage()),
+        
+        User(name: "Dilan", surname: "", age: 1, sex: .female, urlFoto: self.randomImage()),
+        User(name: "Colen", surname: "", age: 1, sex: .female, urlFoto: self.randomImage()),
+        User(name: "Inga", surname: "", age: 1, sex: .female, urlFoto: self.randomImage()),
+        User(name: "Flora", surname: "", age: 1, sex: .female, urlFoto: self.randomImage()),
+        
+        User(name: "Elionor", surname: "", age: 1, sex: .female, urlFoto: self.randomImage()),
+        User(name: "Herb", surname: "", age: 1, sex: .female, urlFoto: self.randomImage()),
+        User(name: "Klint", surname: "", age: 1, sex: .female, urlFoto: self.randomImage()),
+        User(name: "Nora", surname: "", age: 1, sex: .female, urlFoto: self.randomImage()),
+        User(name: "Olga", surname: "", age: 1, sex: .female, urlFoto: self.randomImage()),
+        User(name: "Petr", surname: "", age: 1, sex: .female, urlFoto: self.randomImage()),
+
+        User(name: "Quwin", surname: "", age: 1, sex: .female, urlFoto: self.randomImage()),
+        User(name: "Robert", surname: "", age: 1, sex: .female, urlFoto: self.randomImage()),
+        User(name: "Serg", surname: "", age: 1, sex: .female, urlFoto: self.randomImage()),
+        User(name: "Tery", surname: "", age: 1, sex: .female, urlFoto: self.randomImage()),
+        User(name: "Uliam", surname: "", age: 1, sex: .female, urlFoto: self.randomImage()),
+
+        User(name: "Violet", surname: "", age: 1, sex: .female, urlFoto: self.randomImage()),
+        User(name: "Wolf", surname: "", age: 1, sex: .female, urlFoto: self.randomImage()),
+        User(name: "Xander", surname: "", age: 1, sex: .female, urlFoto: self.randomImage()),
+        User(name: "Yellow", surname: "", age: 1, sex: .female, urlFoto: self.randomImage()),
+        User(name: "Zelda", surname: "", age: 1, sex: .female, urlFoto: self.randomImage()),
+
+        User(name: "Liza", surname: "", age: 1, sex: .female, urlFoto: self.randomImage())
+        ]
+    }
+    
 }

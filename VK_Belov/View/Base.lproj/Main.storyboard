@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4Ey-kj-w9h">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -457,120 +458,34 @@
             </objects>
             <point key="canvasLocation" x="3467" y="400"/>
         </scene>
-        <!--Login-->
+        <!--Web Screen-->
         <scene sceneID="EdT-fg-rOz">
             <objects>
-                <viewController id="4Ey-kj-w9h" sceneMemberID="viewController">
+                <viewController id="4Ey-kj-w9h" customClass="VKWebScreen" customModule="VK_Belov" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mbR-22-fbK">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SZO-LV-u2r">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
-                                <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CS2-qQ-cpg" userLabel="ContentView">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="375"/>
-                                        <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="Arx-SV-rqm">
-                                                <rect key="frame" x="87" y="50" width="240" height="275"/>
-                                                <subviews>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Login" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="otY-QK-tCN" userLabel="Login">
-                                                        <rect key="frame" x="0.0" y="0.0" width="240" height="35"/>
-                                                        <accessibility key="accessibilityConfiguration" label="login"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="35" id="0XD-gN-UMO"/>
-                                                            <constraint firstAttribute="width" constant="240" id="Bee-Gg-ELq"/>
-                                                        </constraints>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits"/>
-                                                        <connections>
-                                                            <action selector="tfLogin:" destination="4Ey-kj-w9h" eventType="editingDidEnd" id="ed7-2d-ADB"/>
-                                                        </connections>
-                                                    </textField>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Pass" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="d94-lq-52X" userLabel="Pass">
-                                                        <rect key="frame" x="0.0" y="75" width="240" height="40"/>
-                                                        <accessibility key="accessibilityConfiguration" label="pass"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" constant="240" id="t4z-Wg-b9V"/>
-                                                            <constraint firstAttribute="height" constant="40" id="wwV-Du-7je"/>
-                                                        </constraints>
-                                                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
-                                                        <connections>
-                                                            <action selector="tfPass:" destination="4Ey-kj-w9h" eventType="editingDidEnd" id="e7F-sy-6mm"/>
-                                                        </connections>
-                                                    </textField>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pQu-al-Qit" userLabel="BLogin">
-                                                        <rect key="frame" x="0.0" y="155" width="240" height="40"/>
-                                                        <color key="backgroundColor" white="1" alpha="0.16577421279999999" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <accessibility key="accessibilityConfiguration" label="BLogin"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" constant="240" id="XZl-OK-5fc"/>
-                                                            <constraint firstAttribute="height" constant="40" id="azi-8K-w4r"/>
-                                                        </constraints>
-                                                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
-                                                        <state key="normal" title="Login">
-                                                            <color key="titleColor" systemColor="opaqueSeparatorColor"/>
-                                                        </state>
-                                                    </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zib-2e-0gQ" userLabel="BRegistraited">
-                                                        <rect key="frame" x="0.0" y="235" width="240" height="40"/>
-                                                        <color key="backgroundColor" white="1" alpha="0.16577421279999999" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" constant="240" id="HfM-5V-Gdu"/>
-                                                            <constraint firstAttribute="height" constant="40" id="jTY-Pn-GVm"/>
-                                                        </constraints>
-                                                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
-                                                        <state key="normal" title="Registraited">
-                                                            <color key="titleColor" systemColor="opaqueSeparatorColor"/>
-                                                        </state>
-                                                        <connections>
-                                                            <action selector="buttomRegistraited:" destination="4Ey-kj-w9h" eventType="touchUpInside" id="qLO-Wh-p4q"/>
-                                                        </connections>
-                                                    </button>
-                                                </subviews>
-                                            </stackView>
-                                        </subviews>
-                                        <color key="backgroundColor" systemColor="systemBlueColor"/>
-                                        <constraints>
-                                            <constraint firstItem="Arx-SV-rqm" firstAttribute="centerX" secondItem="CS2-qQ-cpg" secondAttribute="centerX" id="9Rk-H4-3xj"/>
-                                            <constraint firstItem="Arx-SV-rqm" firstAttribute="top" secondItem="CS2-qQ-cpg" secondAttribute="top" constant="50" id="ERk-jL-htG"/>
-                                            <constraint firstItem="Arx-SV-rqm" firstAttribute="centerY" secondItem="CS2-qQ-cpg" secondAttribute="centerY" id="m6e-Tm-2fx"/>
-                                        </constraints>
-                                    </view>
-                                </subviews>
-                                <gestureRecognizers/>
-                                <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="CS2-qQ-cpg" secondAttribute="trailing" id="2kN-yT-nfy"/>
-                                    <constraint firstAttribute="bottom" secondItem="CS2-qQ-cpg" secondAttribute="bottom" constant="492" id="JaX-aO-iym"/>
-                                    <constraint firstItem="CS2-qQ-cpg" firstAttribute="top" secondItem="SZO-LV-u2r" secondAttribute="top" id="KGN-cv-ibR"/>
-                                    <constraint firstItem="CS2-qQ-cpg" firstAttribute="centerX" secondItem="SZO-LV-u2r" secondAttribute="centerX" id="ahG-wA-DMf"/>
-                                    <constraint firstItem="CS2-qQ-cpg" firstAttribute="leading" secondItem="SZO-LV-u2r" secondAttribute="leading" id="tTx-bJ-175"/>
-                                </constraints>
-                                <viewLayoutGuide key="contentLayoutGuide" id="psS-rX-msZ"/>
-                                <viewLayoutGuide key="frameLayoutGuide" id="hpm-ho-wQy"/>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="AiA-zp-H3N" appends="YES" id="FY9-Tb-RiT"/>
-                                </connections>
-                            </scrollView>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wqi-jp-9y5">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="2cP-Ff-cTq"/>
                         <color key="backgroundColor" systemColor="systemBlueColor"/>
                         <constraints>
-                            <constraint firstItem="SZO-LV-u2r" firstAttribute="leading" secondItem="2cP-Ff-cTq" secondAttribute="leading" id="5wv-NE-hxo"/>
-                            <constraint firstItem="SZO-LV-u2r" firstAttribute="centerX" secondItem="mbR-22-fbK" secondAttribute="centerX" id="dEN-PQ-gp6"/>
-                            <constraint firstItem="SZO-LV-u2r" firstAttribute="trailing" secondItem="2cP-Ff-cTq" secondAttribute="trailing" id="gbp-u0-eYp"/>
-                            <constraint firstItem="SZO-LV-u2r" firstAttribute="top" secondItem="mbR-22-fbK" secondAttribute="topMargin" constant="-44" id="lAN-UJ-Y66"/>
-                            <constraint firstItem="SZO-LV-u2r" firstAttribute="bottom" secondItem="2cP-Ff-cTq" secondAttribute="bottom" id="mFN-xD-ngF"/>
+                            <constraint firstItem="wqi-jp-9y5" firstAttribute="trailing" secondItem="2cP-Ff-cTq" secondAttribute="trailing" id="Gf2-uW-2b8"/>
+                            <constraint firstItem="wqi-jp-9y5" firstAttribute="top" secondItem="mbR-22-fbK" secondAttribute="top" id="bBd-08-kFX"/>
+                            <constraint firstItem="wqi-jp-9y5" firstAttribute="leading" secondItem="2cP-Ff-cTq" secondAttribute="leading" id="uMj-U9-7DQ"/>
+                            <constraint firstAttribute="bottom" secondItem="wqi-jp-9y5" secondAttribute="bottom" id="xzE-x7-CFr"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Login" id="G3i-EH-8Ey">
-                        <barButtonItem key="backBarButtonItem" title=" " id="scw-K3-Cjp"/>
-                    </navigationItem>
                     <connections>
-                        <outlet property="loginTestField" destination="otY-QK-tCN" id="mnX-gd-Kbx"/>
-                        <outlet property="passwordTestField" destination="d94-lq-52X" id="IQj-Vc-5CX"/>
-                        <outlet property="scrollView" destination="SZO-LV-u2r" id="UNd-UH-aDm"/>
+                        <outlet property="webview" destination="wqi-jp-9y5" id="cSZ-Nc-PU7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S1H-aY-evg" sceneMemberID="firstResponder"/>
@@ -580,7 +495,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="-894" y="-21"/>
+            <point key="canvasLocation" x="-894.20289855072474" y="-21.428571428571427"/>
         </scene>
     </scenes>
     <resources>

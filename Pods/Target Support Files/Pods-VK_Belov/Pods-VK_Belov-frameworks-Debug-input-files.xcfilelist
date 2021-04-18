@@ -1,2 +1,3 @@
 ${PODS_ROOT}/Target Support Files/Pods-VK_Belov/Pods-VK_Belov-frameworks.sh
 ${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework
+${BUILT_PRODUCTS_DIR}/VK-ios-sdk/VK_ios_sdk.framework

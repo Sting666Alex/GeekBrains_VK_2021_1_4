@@ -5,8 +5,9 @@ target 'VK_Belov' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
 
+  # Pods for VK_Belov
+  pod "VK-ios-sdk"
   pod 'Alamofire', '~> 4.8'
 
-  # Pods for VK_Belov
 
 end

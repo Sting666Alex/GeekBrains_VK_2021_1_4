@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,7 @@
 		C013CD5325E3CC3800292695 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C013CD5225E3CC3800292695 /* UIViewControllerExtension.swift */; };
 		C013CD5D25E4C92800292695 /* FrendsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C013CD5C25E4C92800292695 /* FrendsTableViewController.swift */; };
 		C013CD6125E4D0A500292695 /* FotoCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C013CD6025E4D0A500292695 /* FotoCollectionViewController.swift */; };
+		C038897C26260BA700CFFF3D /* VKWeb.swift in Sources */ = {isa = PBXBuildFile; fileRef = C038897B26260BA700CFFF3D /* VKWeb.swift */; };
 		C081E365260A5DD100EE3377 /* NewsCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C081E364260A5DD100EE3377 /* NewsCollectionView.swift */; };
 		C081E36D260BA9DF00EE3377 /* NewsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C081E36B260BA9DF00EE3377 /* NewsCollectionViewCell.swift */; };
 		C081E36E260BA9DF00EE3377 /* NewsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C081E36C260BA9DF00EE3377 /* NewsCollectionViewCell.xib */; };
@@ -47,6 +48,7 @@
 		C013CD5225E3CC3800292695 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 		C013CD5C25E4C92800292695 /* FrendsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrendsTableViewController.swift; sourceTree = "<group>"; };
 		C013CD6025E4D0A500292695 /* FotoCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FotoCollectionViewController.swift; sourceTree = "<group>"; };
+		C038897B26260BA700CFFF3D /* VKWeb.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VKWeb.swift; sourceTree = "<group>"; };
 		C081E364260A5DD100EE3377 /* NewsCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCollectionView.swift; sourceTree = "<group>"; };
 		C081E36B260BA9DF00EE3377 /* NewsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCollectionViewCell.swift; sourceTree = "<group>"; };
 		C081E36C260BA9DF00EE3377 /* NewsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -95,6 +97,7 @@
 			children = (
 				C0C005E825DCE26100A47A61 /* FirsScreen.swift */,
 				C00EB455260DDAF8007BAEBF /* BaseViewController.swift */,
+				C038897B26260BA700CFFF3D /* VKWeb.swift */,
 			);
 			path = FirstView;
 			sourceTree = "<group>";
@@ -264,7 +267,6 @@
 				D09D6496C8CB0CABB3D3771F /* Pods-VK_Belov.debug.xcconfig */,
 				2B8FD4FB715894262F2D76B4 /* Pods-VK_Belov.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -398,6 +400,7 @@
 				C0ECE7DE25E98F6900E8A2D8 /* ComunityTableViewController.swift in Sources */,
 				C0C005E925DCE26100A47A61 /* FirsScreen.swift in Sources */,
 				C081E36D260BA9DF00EE3377 /* NewsCollectionViewCell.swift in Sources */,
+				C038897C26260BA700CFFF3D /* VKWeb.swift in Sources */,
 				C095F7A725F339D700FA2989 /* CustomImageView.swift in Sources */,
 				C00EB453260DD60F007BAEBF /* LoadingView.swift in Sources */,
 				C0C8A4FF25FC91F7005E2956 /* FotoCollectionViewCell.swift in Sources */,
@@ -493,7 +496,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -548,7 +551,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
