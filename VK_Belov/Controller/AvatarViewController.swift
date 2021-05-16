@@ -18,7 +18,7 @@ class AvatarViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
        
-        tokenUser.text = UserSession.shared.token // singltone
+        //tokenUser.text = UserSession.shared.token // singltone
         
         let tap = UITapGestureRecognizer(target: self, action: #selector(iconTapped))
         

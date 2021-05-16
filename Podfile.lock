@@ -1,20 +1,26 @@
 PODS:
   - Alamofire (4.9.1)
-  - VK-ios-sdk (1.6.2)
+  - Realm (10.7.3):
+    - Realm/Headers (= 10.7.3)
+  - Realm/Headers (10.7.3)
+  - RealmSwift (10.7.3):
+    - Realm (= 10.7.3)
 
 DEPENDENCIES:
   - Alamofire (~> 4.8)
-  - VK-ios-sdk
+  - RealmSwift
 
 SPEC REPOS:
   trunk:
     - Alamofire
-    - VK-ios-sdk
+    - Realm
+    - RealmSwift
 
 SPEC CHECKSUMS:
   Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
-  VK-ios-sdk: 5bcf00a2014a7323f98db9328b603d4f96635caa
+  Realm: 472ea9ad72cee02df140dfd2926f482df6addbd2
+  RealmSwift: 7462f44bc04b61505ef70e4863ee7ce48fa12ede
 
-PODFILE CHECKSUM: 58234afdffb888ab7ebee4d01d4815173aead7f6
+PODFILE CHECKSUM: 0472079cf89d5c9b3950705fcee2550c0f3e8489
 
 COCOAPODS: 1.10.1

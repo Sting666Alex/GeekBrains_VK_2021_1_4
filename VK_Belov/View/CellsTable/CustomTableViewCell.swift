@@ -23,7 +23,7 @@ class CustomTableViewCell: UITableViewCell {
         titleFoto.isUserInteractionEnabled = true
     }
     
-    func configure(name: String, user: User){
+    func configure(name: String, user: ItemFrends){
         
         titleLable.text = name
         
@@ -41,12 +41,17 @@ class CustomTableViewCell: UITableViewCell {
         titleFoto.layer.shadowOpacity = 1
         titleFoto.layer.shadowOffset = .init(width: 2, height: 2) //(width: 10, height: 10)
         
+        let url: URL = URL(string: user.urlFoto ?? "person")!
+        let data = try? Data(contentsOf: url) //make sure your image in this url does exist, otherwise unwrap in a if let check / try-catch
+        //myImage.image = UIImage(data: data!)
+        
         let myImage = UIImageView(frame: titleFoto.bounds)
-        if let image = user.urlFoto {
-            myImage.image = UIImage(named: image) // titleFoto.image = UIImage(named: image)
-        } else {
-            myImage.image = UIImage(named: "person")
-        }
+        
+        //if let image = user.urlFoto {
+            myImage.image = UIImage(data: data!) // titleFoto.image = UIImage(named: image)
+        //} else {
+        //    myImage.image = UIImage(named: "person")
+        //}
         
         myImage.clipsToBounds = true
         myImage.layer.cornerRadius = titleFoto.frame.height / 2

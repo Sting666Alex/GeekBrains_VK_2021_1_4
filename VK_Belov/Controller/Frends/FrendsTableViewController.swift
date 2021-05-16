@@ -20,26 +20,44 @@ class FrendsTableViewController: UIViewController, UITableViewDataSource, UITabl
         tableView.register(UINib(nibName: "CustomTableViewCell", bundle: nil), forCellReuseIdentifier: CustomTableViewCell.reuseId)
         
         loadFrends()
-        setupDataSource()
     }
     
     // для передачи информации в новый экран
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let controller = segue.destination as? FotoCollectionViewController,
             let indexPath = tableView.indexPathForSelectedRow{
-            let activFrend = myFrends[indexPath.row]
-            controller.selectFrends = activFrend.name
+            
+            let activFrend = getFriend(for: indexPath)
+            controller.selectFrends.removeAll()
+            controller.selectFrends.append(activFrend)
             }
      }
     
     // MARK: - Data source
-    var myFrends: [User] = []//User.arrUser
-    var filterMyFrends: [User] = []
+    
+    var myFrends: [ItemFrends] = []
+    var myFrendsRealm: [ItemFrendsRealm] = []
+    var filterMyFrends: [ItemFrends] = []
     var sections: [String] = []
-    var myFrendsSection: [String: [User]] = [:]
+    var myFrendsSection: [String: [ItemFrends]] = [:]
+    //var frendsElement = [ItemFrends]()
     
     private func loadFrends(){
-        myFrends = User.arrUser.sorted(by: { $0.name.lowercased() < $1.name.lowercased() } )
+        
+        myFrends = loadFrendsRealData()
+
+        if myFrends.isEmpty {
+            WebService().frendsRequest() {[weak self] frendsElementRequest in
+                self?.myFrends = frendsElementRequest
+                self?.setupDataSource()
+                self?.tableView.reloadData()
+            }
+        }else{
+            setupDataSource()
+            WebService().frendsRequest() {[weak self] frendsElementRequest in
+                self?.myFrends = frendsElementRequest
+            }
+        }
     }
     
     private func filterFriends(text: String?){
@@ -53,9 +71,7 @@ class FrendsTableViewController: UIViewController, UITableViewDataSource, UITabl
     }
     
     private func setupDataSource(){
-        // 1 sort myFrends
-        //
-        
+        // 1 filter myFrends
         filterFriends(text: searchBar.text)
         
         // 2 create section firs latters
@@ -71,7 +87,7 @@ class FrendsTableViewController: UIViewController, UITableViewDataSource, UITabl
         }
     }
     
-    private func getFriend( for indexPath: IndexPath) -> User {
+    private func getFriend( for indexPath: IndexPath) -> ItemFrends {
         let sectionLetter = sections[indexPath.section]
         return myFrendsSection[sectionLetter]![indexPath.row]
     }
@@ -100,12 +116,13 @@ class FrendsTableViewController: UIViewController, UITableViewDataSource, UITabl
         let cell = tableView.dequeueReusableCell(withIdentifier: CustomTableViewCell.reuseId, for: indexPath) as! CustomTableViewCell
         let activFrend = getFriend(for: indexPath)
            
-        cell.configure(name: activFrend.name, user: activFrend)
+        cell.configure(name: activFrend.name + " " + activFrend.surname, user: activFrend)
         
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
         performSegue(withIdentifier: "unwindSegie", sender: nil)
     }
     

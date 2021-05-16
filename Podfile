@@ -6,8 +6,8 @@ target 'VK_Belov' do
   use_frameworks!
 
   # Pods for VK_Belov
-  pod "VK-ios-sdk"
+  
   pod 'Alamofire', '~> 4.8'
-
+  pod 'RealmSwift'
 
 end

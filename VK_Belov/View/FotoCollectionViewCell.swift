@@ -24,16 +24,16 @@ class FotoCollectionViewCell: UICollectionViewCell {
         
     }
     
-    func configure(width: CGFloat) {
+    func configure(width: CGFloat, URLString: String) {
         //let widthContentView = width / 3
         
-//        self.frame.size.width = widthContentView
-//        self.frame.size.height = widthContentView
+//      self.frame.size.width = widthContentView
+//      self.frame.size.height = widthContentView
 //
-        
-        iconFotoFrends.image = UIImage(systemName: "sun.min")
-        //iconFotoFrends.center = center
-        //iconFotoFrends.frame = CGRect(x: 0, y: 0, width: Int(width), height: Int(width))
+        let url: URL = URL(string: URLString)!
+        let data = try? Data(contentsOf: url) //make sure your image in this url does exist, otherwise unwrap in a if let check / try-catch
+        iconFotoFrends.image = UIImage(data: data!) // titleFoto.image = UIImage(named: image)
+        //iconFotoFrends.image = UIImage(systemName: "sun.min")
     }
     
     @IBAction func like(_ sender: UIButton) {

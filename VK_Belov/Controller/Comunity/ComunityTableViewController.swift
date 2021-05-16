@@ -9,7 +9,7 @@ import UIKit
 
 class ComunityTableViewController: UITableViewController {
 
-    var myComunity: [String] = []
+    var myComunity: [Int] = []
 //        "Ferst",
 //        "Second"
 //    ]
@@ -57,7 +57,7 @@ class ComunityTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ComunityCell", for: indexPath)
-        cell.textLabel?.text = myComunity[indexPath.row]
+        cell.textLabel?.text = String(myComunity[indexPath.row])
         return cell
     }
     

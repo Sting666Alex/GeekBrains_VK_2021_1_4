@@ -14,10 +14,11 @@
 		C013CD5D25E4C92800292695 /* FrendsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C013CD5C25E4C92800292695 /* FrendsTableViewController.swift */; };
 		C013CD6125E4D0A500292695 /* FotoCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C013CD6025E4D0A500292695 /* FotoCollectionViewController.swift */; };
 		C038897C26260BA700CFFF3D /* VKWeb.swift in Sources */ = {isa = PBXBuildFile; fileRef = C038897B26260BA700CFFF3D /* VKWeb.swift */; };
+		C049FEE7263B3D8F00A4C92D /* PhotoAlbums.swift in Sources */ = {isa = PBXBuildFile; fileRef = C049FEE6263B3D8F00A4C92D /* PhotoAlbums.swift */; };
+		C049FEE9263B3F9E00A4C92D /* PhotoFrends.swift in Sources */ = {isa = PBXBuildFile; fileRef = C049FEE8263B3F9E00A4C92D /* PhotoFrends.swift */; };
 		C081E365260A5DD100EE3377 /* NewsCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C081E364260A5DD100EE3377 /* NewsCollectionView.swift */; };
 		C081E36D260BA9DF00EE3377 /* NewsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C081E36B260BA9DF00EE3377 /* NewsCollectionViewCell.swift */; };
 		C081E36E260BA9DF00EE3377 /* NewsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C081E36C260BA9DF00EE3377 /* NewsCollectionViewCell.xib */; };
-		C095F79825EB7E7200FA2989 /* UserClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C095F79725EB7E7200FA2989 /* UserClass.swift */; };
 		C095F79B25EB7E8C00FA2989 /* GroupClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C095F79A25EB7E8C00FA2989 /* GroupClass.swift */; };
 		C095F79F25EEB6EC00FA2989 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = C095F79E25EEB6EC00FA2989 /* Constant.swift */; };
 		C095F7A225F2972200FA2989 /* AvatarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C095F7A125F2972200FA2989 /* AvatarViewController.swift */; };
@@ -30,6 +31,10 @@
 		C0C005EF25DCE26100A47A61 /* VK_Belov.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C0C005ED25DCE26100A47A61 /* VK_Belov.xcdatamodeld */; };
 		C0C005F125DCE26100A47A61 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C0C005F025DCE26100A47A61 /* Assets.xcassets */; };
 		C0C005F425DCE26100A47A61 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0C005F225DCE26100A47A61 /* LaunchScreen.storyboard */; };
+		C0C5C6A5262FD5AC00C7A27B /* PhotoClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C5C6A4262FD5AC00C7A27B /* PhotoClass.swift */; };
+		C0C5C6A9262FE9B300C7A27B /* FrendsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C5C6A8262FE9B300C7A27B /* FrendsModel.swift */; };
+		C0C5C6AD26340D1600C7A27B /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C5C6AC26340D1600C7A27B /* WebService.swift */; };
+		C0C5C6C02634934800C7A27B /* RealmService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C5C6BF2634934800C7A27B /* RealmService.swift */; };
 		C0C8A4FF25FC91F7005E2956 /* FotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C8A4FD25FC91F7005E2956 /* FotoCollectionViewCell.swift */; };
 		C0C8A50025FC91F7005E2956 /* FotoCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C0C8A4FE25FC91F7005E2956 /* FotoCollectionViewCell.xib */; };
 		C0C8A50725FC9B3B005E2956 /* LikeControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C8A50625FC9B3B005E2956 /* LikeControl.swift */; };
@@ -49,10 +54,11 @@
 		C013CD5C25E4C92800292695 /* FrendsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrendsTableViewController.swift; sourceTree = "<group>"; };
 		C013CD6025E4D0A500292695 /* FotoCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FotoCollectionViewController.swift; sourceTree = "<group>"; };
 		C038897B26260BA700CFFF3D /* VKWeb.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VKWeb.swift; sourceTree = "<group>"; };
+		C049FEE6263B3D8F00A4C92D /* PhotoAlbums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoAlbums.swift; sourceTree = "<group>"; };
+		C049FEE8263B3F9E00A4C92D /* PhotoFrends.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoFrends.swift; sourceTree = "<group>"; };
 		C081E364260A5DD100EE3377 /* NewsCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCollectionView.swift; sourceTree = "<group>"; };
 		C081E36B260BA9DF00EE3377 /* NewsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCollectionViewCell.swift; sourceTree = "<group>"; };
 		C081E36C260BA9DF00EE3377 /* NewsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsCollectionViewCell.xib; sourceTree = "<group>"; };
-		C095F79725EB7E7200FA2989 /* UserClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserClass.swift; sourceTree = "<group>"; };
 		C095F79A25EB7E8C00FA2989 /* GroupClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupClass.swift; sourceTree = "<group>"; };
 		C095F79E25EEB6EC00FA2989 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		C095F7A125F2972200FA2989 /* AvatarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarViewController.swift; sourceTree = "<group>"; };
@@ -67,6 +73,10 @@
 		C0C005F025DCE26100A47A61 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C0C005F325DCE26100A47A61 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C0C005F525DCE26100A47A61 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C0C5C6A4262FD5AC00C7A27B /* PhotoClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoClass.swift; sourceTree = "<group>"; };
+		C0C5C6A8262FE9B300C7A27B /* FrendsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrendsModel.swift; sourceTree = "<group>"; };
+		C0C5C6AC26340D1600C7A27B /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
+		C0C5C6BF2634934800C7A27B /* RealmService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmService.swift; sourceTree = "<group>"; };
 		C0C8A4FD25FC91F7005E2956 /* FotoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FotoCollectionViewCell.swift; sourceTree = "<group>"; };
 		C0C8A4FE25FC91F7005E2956 /* FotoCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FotoCollectionViewCell.xib; sourceTree = "<group>"; };
 		C0C8A50625FC9B3B005E2956 /* LikeControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeControl.swift; sourceTree = "<group>"; };
@@ -114,7 +124,10 @@
 		C013CD5625E41C7B00292695 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				C095F79725EB7E7200FA2989 /* UserClass.swift */,
+				C0C5C6A8262FE9B300C7A27B /* FrendsModel.swift */,
+				C0C5C6A4262FD5AC00C7A27B /* PhotoClass.swift */,
+				C049FEE8263B3F9E00A4C92D /* PhotoFrends.swift */,
+				C049FEE6263B3D8F00A4C92D /* PhotoAlbums.swift */,
 				C095F79A25EB7E8C00FA2989 /* GroupClass.swift */,
 				C0CB3DC1261768B900563F2B /* NewsClass.swift */,
 			);
@@ -160,7 +173,9 @@
 			isa = PBXGroup;
 			children = (
 				C013CD5225E3CC3800292695 /* UIViewControllerExtension.swift */,
+				C0C5C6BF2634934800C7A27B /* RealmService.swift */,
 				C0CB3DC426176ACE00563F2B /* AuxiliaryFunctions.swift */,
+				C0C5C6AC26340D1600C7A27B /* WebService.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -396,11 +411,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				C0CB3DC526176ACE00563F2B /* AuxiliaryFunctions.swift in Sources */,
+				C049FEE7263B3D8F00A4C92D /* PhotoAlbums.swift in Sources */,
 				C013CD6125E4D0A500292695 /* FotoCollectionViewController.swift in Sources */,
+				C0C5C6AD26340D1600C7A27B /* WebService.swift in Sources */,
 				C0ECE7DE25E98F6900E8A2D8 /* ComunityTableViewController.swift in Sources */,
 				C0C005E925DCE26100A47A61 /* FirsScreen.swift in Sources */,
 				C081E36D260BA9DF00EE3377 /* NewsCollectionViewCell.swift in Sources */,
 				C038897C26260BA700CFFF3D /* VKWeb.swift in Sources */,
+				C0C5C6A5262FD5AC00C7A27B /* PhotoClass.swift in Sources */,
 				C095F7A725F339D700FA2989 /* CustomImageView.swift in Sources */,
 				C00EB453260DD60F007BAEBF /* LoadingView.swift in Sources */,
 				C0C8A4FF25FC91F7005E2956 /* FotoCollectionViewCell.swift in Sources */,
@@ -410,15 +428,17 @@
 				C081E365260A5DD100EE3377 /* NewsCollectionView.swift in Sources */,
 				C095F7A225F2972200FA2989 /* AvatarViewController.swift in Sources */,
 				C0C005EF25DCE26100A47A61 /* VK_Belov.xcdatamodeld in Sources */,
+				C0C5C6A9262FE9B300C7A27B /* FrendsModel.swift in Sources */,
 				C00EB456260DDAF8007BAEBF /* BaseViewController.swift in Sources */,
 				C095F7AE25F8A0A200FA2989 /* FirstLetterOfTheName.swift in Sources */,
 				C0ECE7E625EA0A5800E8A2D8 /* AllComunityTableViewController.swift in Sources */,
 				C095F79F25EEB6EC00FA2989 /* Constant.swift in Sources */,
 				C095F79B25EB7E8C00FA2989 /* GroupClass.swift in Sources */,
+				C0C5C6C02634934800C7A27B /* RealmService.swift in Sources */,
 				C013CD5325E3CC3800292695 /* UIViewControllerExtension.swift in Sources */,
+				C049FEE9263B3F9E00A4C92D /* PhotoFrends.swift in Sources */,
 				C0C005E525DCE26100A47A61 /* AppDelegate.swift in Sources */,
 				C0C005E725DCE26100A47A61 /* SceneDelegate.swift in Sources */,
-				C095F79825EB7E7200FA2989 /* UserClass.swift in Sources */,
 				C0CB3DC2261768B900563F2B /* NewsClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

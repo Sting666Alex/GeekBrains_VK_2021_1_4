@@ -486,6 +486,7 @@
                     </view>
                     <connections>
                         <outlet property="webview" destination="wqi-jp-9y5" id="cSZ-Nc-PU7"/>
+                        <segue destination="it9-iU-hKY" kind="show" identifier="unwindSegieFirstScreen" id="bdc-os-fwq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S1H-aY-evg" sceneMemberID="firstResponder"/>
@@ -495,9 +496,12 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="-894.20289855072474" y="-21.428571428571427"/>
+            <point key="canvasLocation" x="588" y="-827"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="bdc-os-fwq"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="newspaper" catalog="system" width="128" height="108"/>
         <image name="person" catalog="system" width="128" height="117"/>

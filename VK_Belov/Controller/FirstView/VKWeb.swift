@@ -9,17 +9,6 @@ import UIKit
 import WebKit
 import Alamofire
 
-final class UserSession {
-    
-    static let shared = UserSession()
-    
-    private init() {}
-    
-    var token = ""
-    var userID = ""
-    var client_id = "7823487"
-}
-
 class VKWebScreen: BaseViewController {
 
     @IBOutlet weak var webview: WKWebView!{
@@ -28,19 +17,10 @@ class VKWebScreen: BaseViewController {
         }
     }
 
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        //let user = UserSession.shared
-        //user.token = ""
-        
         autorizationVK()
-        
-        //firstRequest(id: user.userID, token: user.token)
-        
     }
-    
     
     func autorizationVK(){
         
@@ -54,50 +34,13 @@ class VKWebScreen: BaseViewController {
                     URLQueryItem(name: "redirect_uri", value: "https://oauth.vk.com/blank.html"),
                     URLQueryItem(name: "scope", value: "262150"),
                     URLQueryItem(name: "response_type", value: "token"),
-                    URLQueryItem(name: "v", value: "5.68")
+                    URLQueryItem(name: "v", value: "5.130") //"5.68")
                 ]
                 
                 let request = URLRequest(url: urlComponents.url!)
                 
                 webview.load(request)
     }
-    
-    func frendsRequest(id:String, token: String){
-        
-        Alamofire.request("https://api.vk.com/method/friends.get?user_id=" + id + "&fields=name&count=3&v=5.130&access_token=" + token )
-            .responseJSON{ responds in
-                print(responds.value ?? "")
-            }
-        
-    }
-    
-    func photosRequest(id:String, token: String){
-                
-        Alamofire.request("https://api.vk.com/method/photos.get?user_id=" + id + "&album_id=profile&rev=0&count=3&v=5.130&access_token=" + token )
-            .responseJSON{ responds in
-                print(responds.value ?? "")
-            }
-        
-    }
-    
-    func groupsRequest(id:String, token: String){
-                
-        Alamofire.request("https://api.vk.com/method/groups.get?user_id=" + id + "&count=3&v=5.130&access_token=" + token )
-            .responseJSON{ responds in
-                print(responds.value ?? "")
-            }
-        
-    }
-    
-    func groupsFilterRequest(id:String, token: String){
-                
-        Alamofire.request("https://api.vk.com/method/groups.get?user_id=-" + id + "filter=publics,events&count=3&v=5.130&access_token=" + token )
-            .responseJSON{ responds in
-                print(responds.value ?? "")
-            }
-        
-    }
-    
     
 }
 
@@ -122,20 +65,15 @@ extension VKWebScreen: WKNavigationDelegate {
             
             let token = params["access_token"]
             let userID = params["user_id"]
-            //let expires_in = params["expires_in"] // время его жизни заданное в секунда
+            let expires_in = params["expires_in"] // время его жизни заданное в секунда
             
             //print(token ?? "")
             UserSession.shared.token = token ?? ""
             UserSession.shared.userID = userID ?? ""
-            
-            frendsRequest(id: String(UserSession.shared.userID), token: String(token ?? ""))
-            
-            //photosRequest(id: String(UserSession.shared.userID), token: String(token ?? ""))
-
-            //groupsRequest(id: String(UserSession.shared.userID), token: String(token ?? ""))
-
-            //	groupsFilterRequest(id: String(UserSession.shared.userID), token: String(token ?? ""))
+            UserSession.shared.expires_in = expires_in ?? ""
             
             decisionHandler(.cancel)
+                        
+            performSegue(withIdentifier: "unwindSegieFirstScreen", sender: nil)
         }
-    }
+}

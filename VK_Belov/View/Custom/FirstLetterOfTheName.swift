@@ -17,16 +17,16 @@ class FirstLetterOfTheName: UIControl {
     
     override init(frame: CGRect){
         super.init(frame: frame)
-        setup()
+        //setup()
     }
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
-        setup()
+        //setup()
     }
     
     private func setup(){
-        firstLetters = User.arrUser.map { String( $0.name.uppercased().prefix(1) ) }
+        firstLetters = ["A","B","C"]//User.arrUser.map { String( $0.name.uppercased().prefix(1) ) }
         firstLetters = Array(Set(firstLetters)).sorted()
 //        firstLetters = User.getFirstArrUser()
 //        
@@ -50,12 +50,11 @@ class FirstLetterOfTheName: UIControl {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        stackView.frame = bounds
+        //stackView.frame = bounds
     }
     
     @objc private func buttomTapped(_ sender: UIButton){
         print(#function)
-        
     }
 
 }
