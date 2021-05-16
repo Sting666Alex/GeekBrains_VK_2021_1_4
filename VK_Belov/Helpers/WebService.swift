@@ -19,7 +19,12 @@ final class UserSession {
     var client_id = "7823487"
     var expires_in = ""
     let v = "5.130"
+    
+    let countPhoto = "50"
+    let countFrends = "50"
 }
+
+
 
 class WebService{
     
@@ -31,7 +36,7 @@ class WebService{
             "user_id": String(UserSession.shared.userID),
             "access_token": UserSession.shared.token,
             "fields": "name,photo_50",
-            "count": "50",
+            "count": String(UserSession.shared.countFrends),
             "v": UserSession.shared.v
         ]
         // составляем url из базового адреса сервиса и конкретного пути к ресурсу
@@ -108,6 +113,39 @@ class WebService{
         }
     }
  
+    func photosGetAllRequest(idFrend: String, completion: @escaping ([ItemPhotoFrends]) -> Void ){
+        let baseUrl = "https://api.vk.com/method/"
+        let path = "photos.getAll"
+        let parameters: Parameters = [
+            "user_id": String(UserSession.shared.userID),
+            "access_token": UserSession.shared.token,
+            "owner_id":idFrend,
+            //"album_id":"profile",
+            //"rev":"0",
+            "count": String(UserSession.shared.countPhoto),
+            "v": UserSession.shared.v
+        ]
+        // составляем url из базового адреса сервиса и конкретного пути к ресурсу
+        let url = baseUrl+path
+//        let urlTest = "https://api.vk.com/method/photos.getAll?user_id=-" + String(UserSession.shared.userID) +
+//                        "&owner_id="+idFrend+"&count=3&v=5.130&access_token=" + String(UserSession.shared.token)
+
+        // делаем запрос
+        Alamofire.request(url, method: .get, parameters: parameters).responseData { response in
+            guard let data = response.value else { return }
+            do {
+                let photo = try! JSONDecoder().decode(PhotoFrends.self, from: data)
+                completion(photo.response.items)
+                insertOrUpdatePhoto(itemPhotoFrends: photo.response.items)
+            } catch {
+                print(error)
+            }
+        }
+    }
+    
+    
+    
+    // MARK: - not Use
     func photosAlbumRequest(idFrend: String, completion: @escaping ([ItemPhotoAlbums]) -> Void ){
         let baseUrl = "https://api.vk.com/method/"
         let path = "photos.getAlbums"
@@ -131,39 +169,6 @@ class WebService{
             do {
                 let photo = try! JSONDecoder().decode(PhotoAlbums.self, from: data)
                 completion(photo.response.items)
-            } catch {
-                print(error)
-            }
-        }
-    }
-    
-    func photosGetAllRequest(idFrend: String, completion: @escaping ([ItemPhotoFrends]) -> Void ){
-        let baseUrl = "https://api.vk.com/method/"
-        let path = "photos.getAll"
-        let parameters: Parameters = [
-            "user_id": String(UserSession.shared.userID),
-            "access_token": UserSession.shared.token,
-            "owner_id":idFrend,
-            //"album_id":"profile",
-            //"rev":"0",
-            "count": "20",
-            "v": UserSession.shared.v
-        ]
-        // составляем url из базового адреса сервиса и конкретного пути к ресурсу
-        let url = baseUrl+path
-//        let urlTest = "https://api.vk.com/method/photos.getAll?user_id=-" + String(UserSession.shared.userID) +
-//                        "&owner_id="+idFrend+"&count=3&v=5.130&access_token=" + String(UserSession.shared.token)
-
-        // делаем запрос
-        Alamofire.request(url, method: .get, parameters: parameters).responseData { response in
-            guard let data = response.value else { return }
-            do {
-                let photo = try! JSONDecoder().decode(PhotoFrends.self, from: data)
-                
-                //
-                
-                completion(photo.response.items)
-                insertOrUpdatePhoto(itemPhotoFrends: photo.response.items)
             } catch {
                 print(error)
             }
@@ -199,5 +204,6 @@ class WebService{
             }
         }
     }
+    
     
 }
