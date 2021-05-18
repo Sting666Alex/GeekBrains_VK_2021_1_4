@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		237B938A8E0BE10C3148B4C8 /* Pods_VK_Belov.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA875F158BAAECB3DFB09F02 /* Pods_VK_Belov.framework */; };
+		C00E7A012652E63F00CA2C41 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C00E7A002652E63F00CA2C41 /* GoogleService-Info.plist */; };
+		C00E7A032652EA3700CA2C41 /* FireBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00E7A022652EA3700CA2C41 /* FireBase.swift */; };
 		C00EB453260DD60F007BAEBF /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00EB452260DD60F007BAEBF /* LoadingView.swift */; };
 		C00EB456260DDAF8007BAEBF /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00EB455260DDAF8007BAEBF /* BaseViewController.swift */; };
 		C013CD5325E3CC3800292695 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C013CD5225E3CC3800292695 /* UIViewControllerExtension.swift */; };
@@ -48,6 +50,8 @@
 
 /* Begin PBXFileReference section */
 		2B8FD4FB715894262F2D76B4 /* Pods-VK_Belov.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VK_Belov.release.xcconfig"; path = "Target Support Files/Pods-VK_Belov/Pods-VK_Belov.release.xcconfig"; sourceTree = "<group>"; };
+		C00E7A002652E63F00CA2C41 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		C00E7A022652EA3700CA2C41 /* FireBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireBase.swift; sourceTree = "<group>"; };
 		C00EB452260DD60F007BAEBF /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		C00EB455260DDAF8007BAEBF /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		C013CD5225E3CC3800292695 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
@@ -176,6 +180,7 @@
 				C0C5C6BF2634934800C7A27B /* RealmService.swift */,
 				C0CB3DC426176ACE00563F2B /* AuxiliaryFunctions.swift */,
 				C0C5C6AC26340D1600C7A27B /* WebService.swift */,
+				C00E7A022652EA3700CA2C41 /* FireBase.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -227,6 +232,7 @@
 		C0C005E325DCE26100A47A61 /* VK_Belov */ = {
 			isa = PBXGroup;
 			children = (
+				C00E7A002652E63F00CA2C41 /* GoogleService-Info.plist */,
 				C095F79D25EEB6D000FA2989 /* Constants */,
 				C013CD5725E41CAD00292695 /* View */,
 				C013CD5525E41C6E00292695 /* App */,
@@ -358,6 +364,7 @@
 				C0C8A50025FC91F7005E2956 /* FotoCollectionViewCell.xib in Resources */,
 				C0C8A50D25FD463C005E2956 /* CustomTableViewCell.xib in Resources */,
 				C0C005EC25DCE26100A47A61 /* Main.storyboard in Resources */,
+				C00E7A012652E63F00CA2C41 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -435,6 +442,7 @@
 				C095F79F25EEB6EC00FA2989 /* Constant.swift in Sources */,
 				C095F79B25EB7E8C00FA2989 /* GroupClass.swift in Sources */,
 				C0C5C6C02634934800C7A27B /* RealmService.swift in Sources */,
+				C00E7A032652EA3700CA2C41 /* FireBase.swift in Sources */,
 				C013CD5325E3CC3800292695 /* UIViewControllerExtension.swift in Sources */,
 				C049FEE9263B3F9E00A4C92D /* PhotoFrends.swift in Sources */,
 				C0C005E525DCE26100A47A61 /* AppDelegate.swift in Sources */,

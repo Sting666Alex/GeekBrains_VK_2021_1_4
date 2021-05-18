@@ -28,6 +28,9 @@ class ComunityTableViewController: UITableViewController {
         
         if !myComunity.contains(comunity){
             myComunity.append(comunity)
+            
+            SaveDataInBase().saveInBaseGroupe(groupeId: comunity)
+            
             tableView.reloadData()
         }
     }

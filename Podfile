@@ -10,4 +10,11 @@ target 'VK_Belov' do
   pod 'Alamofire', '~> 4.8'
   pod 'RealmSwift'
 
+  # add pods for desired Firebase products
+  # https://firebase.google.com/docs/ios/setup#available-pods
+  pod 'Firebase/Auth'
+  pod 'Firebase/Firestore'
+  pod 'Firebase/Database'
+  pod 'Firebase/Crashlytics'
+  
 end
